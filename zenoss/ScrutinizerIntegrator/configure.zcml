@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configure xmlns="http://namespaces.zope.org/zope"
+           xmlns:browser="http://namespaces.zope.org/browser"
+           >
+
+
+  <!-- Define a place for our zenpack to register javascript -->
+  <browser:resourceDirectory
+      name="scrutinizer"
+      directory="resources"
+      />
+  
+  <browser:viewlet
+      name="js-scrutinizer"
+      paths="/++resource++scrutinizer/Scrutinizer.js"
+      weight="10"
+      manager="Products.ZenUI3.browser.interfaces.IJavaScriptSrcManager"
+      class="Products.ZenUI3.browser.javascript.JavaScriptSrcBundleViewlet"
+      permission="zope2.Public"
+      />
+
+
+  <!-- 
+  <adapter factory=".info.DeviceInfoPlaydom"
+           provides="Products.Zuul.interfaces.IDeviceInfo"	
+           />
+  -->
+  <!-- <browser:viewlet
+      name="js-zenvmware-vmwarehostdetail"
+      paths="/++resource++zenvmware/VMwareHostDetail.js
+             /++resource++zenvmware/VMwareHBA.js
+             /++resource++zenvmware/VMwareHostVolume.js
+             /++resource++zenvmware/VMwareHostVolumePartition.js
+             /++resource++zenvmware/VMwareLun.js
+             "
+      weight="9"
+      for=".VMwareHost.VMwareHost"
+      manager="Products.ZenUI3.browser.interfaces.IHeadExtraManager"
+      class="Products.ZenUI3.browser.javascript.JavaScriptSrcBundleViewlet"
+      permission="zope2.Public"
+      /> -->
+</configure>
