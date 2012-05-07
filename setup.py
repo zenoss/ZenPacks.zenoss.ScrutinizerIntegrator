@@ -5,7 +5,7 @@
 NAME = "ZenPacks.zenoss.ScrutinizerIntegrator"
 VERSION = "1.0.0"
 AUTHOR = "Zenoss"
-LICENSE = ""
+LICENSE = "GPLv2"
 NAMESPACE_PACKAGES = ['ZenPacks', 'ZenPacks.zenoss']
 PACKAGES = ['ZenPacks', 'ZenPacks.zenoss', 'ZenPacks.zenoss.ScrutinizerIntegrator']
 INSTALL_REQUIRES = []
